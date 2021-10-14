@@ -85,11 +85,15 @@ export default function App({count = 100, depth = 80}) {
 
 const TextContainer = styled.div`
     position: absolute;
-    top: calc(50vh - calc(191px/2));
-    left: calc(50vw - calc(607px/2));
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	pointer-events: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+	justify-content: center;
 `
 
 const CanvasWrapper = styled.div`
@@ -105,6 +109,8 @@ const fade = keyframes`
 
 const ItsWednesdayTextWrapper = styled.p`
 	opacity: 0;
+	height: 100px;
+	width: calc(30vw + 100px);
 	animation: ${fade} 2s normal forwards ease-in-out;
 	animation-delay: 4s;
 `;
